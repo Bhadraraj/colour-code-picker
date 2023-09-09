@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .cont {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 200px; /* Adjust this value to match your div's width */
+        background-color: #f0f0f0;
+        text-align: center;
+        padding: 20px;
+      }
+      #red {
+        background-color: red;
+        padding: 0 10px;
+      }
+      #green {
+        background-color: rgb(19, 225, 0);
+        padding: 0 10px;
+      }
+      #blue {
+        background-color: rgb(0, 8, 255);
+        padding: 0 10px;
+      }
+      .colorOp {
+        height: 90%;
+        padding: 50px;
+        /* width:90%; */
+        margin: auto;
+        border: 2px solid black;
+      }
+      h5{
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cont">
+      <h5>Colour Code Picker</h5>
+      <input type="button" id="red" onclick="red() " />
+      <input type="button" id="green" onclick="green() " />
+      <input type="button" id="blue" onclick="blue() " />
+      <div class="colorOp"></div>
+    </div>
+    <script>
+      var opCont = document.querySelector(".colorOp");
+      console.log(opCont);
+      function red() {
+        return (opCont.style.backgroundColor = "red");
+        console.log("Red color applied");
+      }
+      function green() {
+        return (opCont.style.backgroundColor = "green");
+        console.log("green color applied");
+      }
+      function blue() {
+        return (opCont.style.backgroundColor = "blue");
+        console.log("Blue color applied");
+      }
+    </script>
+  </body>
+</html>
